@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Seite im Aufbau</title>
   <style>
-    body{margin:0;display:grid;place-items:center;min-height:100vh;font-family:system-ui;background:#fff;}
-    .wrap{text-align:center;padding:24px;}
-    img{max-width:min(700px,90vw);height:auto;}
-    h1{font-size:1.6rem;margin:16px 0 6px;}
-    p{color:#666;margin:0;}
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      background: #000; /* falls kleine Ränder entstehen */
+    }
+    .bg {
+      position: fixed;
+      inset: 0;               /* top/right/bottom/left = 0 */
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;      /* FULLSCREEN */
+      object-position: center;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <img src="/blob/main/im-aufbau.jpg" alt="Seite im Aufbau">
-    <h1>Wir sind bald wieder da!</h1>
-    <p>Diese Website wird gerade überarbeitet.</p>
-  </div>
+  <img class="bg" src="/blob/main/im-aufbau.jpg" alt="Seite im Aufbau">
 </body>
 </html>
